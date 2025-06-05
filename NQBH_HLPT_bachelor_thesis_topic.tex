@@ -1,0 +1,212 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fancyvrb,float,graphicx,mathtools,minitoc,tikz}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+%  \addtolength{\headheight}{0pt}% obsolete
+\lhead{\itshape  \chaptername~\thechapter}
+\rhead{\itshape  \nouppercase{\leftmark}} %\nouppercase !
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+
+\usepackage{textcase}
+
+\makeatletter
+\def\@makechapterhead#1{%
+    \vspace*{50\p@}%
+    {\parindent \z@ \centering\normalfont
+        \ifnum \c@secnumdepth >\m@ne
+        \if@mainmatter
+        \huge\bfseries \MakeTextUppercase{\@chapapp}\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+        \fi
+        \fi
+        \interlinepenalty\@M
+        \huge \bfseries \MakeTextUppercase{#1}\par\nobreak
+        \vskip 40\p@
+}}
+\def\@makeschapterhead#1{%
+    \vspace*{50\p@}%
+    {\parindent \z@ \centering
+        \normalfont
+        \interlinepenalty\@M
+        \huge \bfseries  \MakeTextUppercase{#1}\par\nobreak
+        \vskip 40\p@
+}}
+\makeatother
+
+
+\DeclareMathSymbol{\mathinvertedexclamationmark}{\mathclose}{operators}{'074}
+\DeclareMathSymbol{\mathexclamationmark}{\mathclose}{operators}{'041}
+
+\makeatletter
+\newcommand{\raisedmathinvertedexclamationmark}{%
+    \mathclose{\mathpalette\raised@mathinvertedexclamationmark\relax}%
+}
+\newcommand{\raised@mathinvertedexclamationmark}[2]{%
+    \raisebox{\depth}{$\m@th#1\mathinvertedexclamationmark$}%
+}
+\begingroup\lccode`~=`! \lowercase{\endgroup
+    \def~}{\@ifnextchar`{\raisedmathinvertedexclamationmark\@gobble}{\mathexclamationmark}}
+\mathcode`!="8000
+\makeatother
+
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{goal}{Goal}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{intuition}{Intuition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+    \mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+\newcommand{\genstirlingI}[3]{%
+    \genfrac{[}{]}{0pt}{#1}{#2}{#3}%
+}
+\newcommand{\genstirlingII}[3]{%
+    \genfrac{\{}{\}}{0pt}{#1}{#2}{#3}%
+}
+\newcommand{\stirlingI}[2]{\genstirlingI{}{#1}{#2}}
+\newcommand{\dstirlingI}[2]{\genstirlingI{0}{#1}{#2}}
+\newcommand{\tstirlingI}[2]{\genstirlingI{1}{#1}{#2}}
+\newcommand{\stirlingII}[2]{\genstirlingII{}{#1}{#2}}
+\newcommand{\dstirlingII}[2]{\genstirlingII{0}{#1}{#2}}
+\newcommand{\tstirlingII}[2]{\genstirlingII{1}{#1}{#2}}
+
+\title{Potential Research Topics for Bachelor Thesis Supervision\\Các Chủ Đề Nghiên Cứu Làm Khóa Luận Tốt Nghiệp Đại Học}
+\author{Nguyễn Quản Bá Hồng\footnote{A scientist- {\it\&} creative artist wannabe, a mathematics {\it\&} computer science lecturer of Department of Artificial Intelligence {\it\&} Data Science (AIDS), School of Technology (SOT), UMT Trường Đại học Quản lý {\it\&} Công nghệ TP.HCM, Hồ Chí Minh City, Việt Nam.\\E-mail: {\sf nguyenquanbahong@gmail.com} {\it\&} {\sf hong.nguyenquanba@umt.edu.vn}. Website: \url{https://nqbh.github.io/}. GitHub: \url{https://github.com/NQBH}.}\and Huỳnh Lê Phú Trung\footnote{A mathematics {\it\&} computer science lecturer of Department of Artificial Intelligence {\it\&} Data Science (AIDS), School of Technology (SOT), UMT Trường Đại học Quản lý {\it\&} Công nghệ TP.HCM, Hồ Chí Minh City, Việt Nam.\\E-mail: {\sf trung.huynhlephu@umt.edu.vn}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\dominitoc % Initialization
+
+%------------------------------------------------------------------------------%
+
+\section*{Preface}
+Các đề tài nghiên cứu tiềm năng cho Khóa Luận Tốt Nghiệp cho sinh viên Khoa Công Nghệ, UMT.
+
+%------------------------------------------------------------------------------%
+
+\newpage
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{Combinatorial Neural Networks \& Optimization Problems in Graph Theory}
+\minitoc
+
+\begin{enumerate}
+    \item {\bf Keywords.} Combinatorial neural networks.
+    \item {\bf Student.} {\sc Phan Vĩnh Tiến [PVT].}
+\end{enumerate}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}    
+    \item {\sc Quentin Cappart, Didier Ch\`etelat, Elias B. Khalil, Andrea Lodi, Christopher Morris, Petar Veli\v{c}kovi\'c}. {\it Combinatorial Optimization \& Reasoning with Graph Neural Networks}.
+    \item {\sc Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi, Samy Bengio} (Google Brain). {\it Neural Combinatorial Optimization with Reinforcement Learning}. ICLR2017.
+    \item {\sc Andoni I. Garmendia, Josu Ceberio, Alexander Mendiburu}. {\it Neural Combinatorial Optimization: a New Player in the Field}.
+    \item {\sc Boris Goldengorin}. {\it Optimization Problems in Graph Theory}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Computer Music}
+\minitoc
+\begin{enumerate}
+    \item {\bf Keywords.} Automatic music transcription, music generation.
+    \item {\bf Student.} {\sc Võ Ngọc Trâm Anh [VNTA].}
+\end{enumerate}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+    \item \cite{Briot_Hadjeres_Pachet2020}. {\sc Jean-Pierre Briot, Ga\"etan Jadjeres, Fran\c{c}ois-David Pachet Pachet}. {\it Deep Learning Techniques for Music Generation}.
+    \item \cite{Mueller2015,Mueller2021}. {\sc Meinard M\"{u}ller}. {\it Fundamentals of Music Processing -- Using Python \& Jupyter Notebooks}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Automatic Music Transcription (AMT)}
+{\bf Keywords.} 
+
+%------------------------------------------------------------------------------%
+
+\section{Music Generation}
+{\bf Keywords.} Stochastic, random Boltzmann machine (RBM).
+
+%------------------------------------------------------------------------------%
+
+\chapter{Computer Vision}
+\minitoc
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+    \item {\sc Lý Quốc Ngọc}. {\it Lecture: Introduction to Image Processing \& Applications -- Bài Giảng: Nhập Môn Xử Lý Ảnh \& Ứng Dụng}.
+    \item {\sc David Tschumperle, Christophe Tilman, Vincent Barra}. {\it Digital Image Processing with C++: Implementing Reference Algorithms with the CImg Library}.
+    \item {\sc Mark S. Nixon, Alberto S. Aguado}. {\it Feature Extraction \& Image Processing for Computer Vision}. 4e.
+    \item {\sc Manas Kamal Bhuyan}. {\it Computer Vision \& Image Processing Fundamentals \& Applications}.
+    \item {\sc Rafael C. Gonzalez, Richard E. Woods}. {\it Digital Image Processing}. 4e.
+    \item {\sc Martin McBridge}. {\it Image Processing in Python}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Handwritten Digit Classification}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Scheduling Problems}
+\minitoc
+\begin{enumerate}
+    \item {\bf Keywords.} Deterministic scheduling problem, stochastic scheduling problems.
+    \item {\bf Student.} {\sc Nguyễn Ngọc Thạch [NNT].}
+\end{enumerate}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+    \item \cite{Pinedo2022}. {\sc Michael L. Pinedo}. {\it Scheduling: Theory, Algorithms, \& Systems}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
