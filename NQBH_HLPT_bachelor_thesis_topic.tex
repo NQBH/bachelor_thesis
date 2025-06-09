@@ -10,11 +10,14 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-%  \addtolength{\headheight}{0pt}% obsolete
-\lhead{\itshape  \chaptername~\thechapter}
-\rhead{\itshape  \nouppercase{\leftmark}} %\nouppercase !
+\addtolength{\headheight}{0pt}% obsolete
+\lhead{\scshape\small\chaptername~\thechapter}
+\rhead{\itshape\small\nouppercase{\leftmark}}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyheadoffset[RE,LO]{-0.0\textwidth}
 
 \usepackage{textcase}
 
@@ -133,7 +136,7 @@ Các đề tài nghiên cứu tiềm năng cho Khóa Luận Tốt Nghiệp cho s
 
 \chapter{Preliminaries -- Kiến Thức Chuẩn Bị}
 \minitoc
-{\bf Keywords.}
+{\it Keywords.}
 \begin{enumerate}
     \item Machine Learning (ML).
     \begin{enumerate}
@@ -142,6 +145,36 @@ Các đề tài nghiên cứu tiềm năng cho Khóa Luận Tốt Nghiệp cho s
         \item Reinforcement Learning (RL).
     \end{enumerate}
     \item Deep Learning (DL).
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Mathematical Analysis {\it\&} Numerical Analysis -- Giải Tích Toán Học {\it\&} Giải Tích Số}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+    \item NQBH. {\it Lecture Note: Mathematical Analysis \& Numerical Analysis -- Bài Giảng: Giải Tích Toán Học \& Giải Tích Số}.
+    
+    PDF: {\sc url}: \url{https://github.com/NQBH/advanced_STEM_beyond/blob/main/analysis/lecture/NQBH_mathematical_analysis_lecture.pdf}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Combinatorics {\it\&} Graph Theory -- Tổ Hợp {\it\&} Lý Thuyết Đồ Thị}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+    \item NQBH. {\it Lecture Note: Combinatorics \& Graph Theory -- Bài Giảng: Tổ Hợp \& Lý Thuyết Đồ Thị}.
+    
+    PDF: {\sc url}: \url{https://github.com/NQBH/advanced_STEM_beyond/blob/main/combinatorics/lecture/NQBH_combinatorics_graph_theory_lecture.pdf}.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Mathematical Optimization -- Toán Tối Ưu}
+\textbf{\textsf{Resources -- Tài nguyên.}}
+\begin{enumerate}
+    \item NQBH. {\it Lecture Note: Mathematical Optimization -- Bài Giảng: Toán Tối Ưu}.
+    
+    PDF: {\sc url}: \url{https://github.com/NQBH/advanced_STEM_beyond/blob/main/optimization/lecture/NQBH_mathematical_optimization_lecture.pdf}.
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
@@ -194,18 +227,20 @@ Các đề tài nghiên cứu tiềm năng cho Khóa Luận Tốt Nghiệp cho s
 \minitoc
 
 \begin{enumerate}
-    \item {\bf Keywords.} Combinatorial neural networks.
-    \item {\bf Student.} {\sc Phan Vĩnh Tiến [PVT].}
+    \item {\it Keywords.} Combinatorial neural networks.
+    \item {\it Student.} {\sc Phan Vĩnh Tiến [PVT].}
 \end{enumerate}
 \textbf{\textsf{Resources -- Tài nguyên.}}
-\begin{enumerate}    
+\begin{enumerate}
+    \item {\sc Alessandro Benfenati, Emilie Chouzenoux, Laurent Duval, Jean-Christophe Pesquet, Aurélie Pirayre}. {\it A review on graph optimization \& algorithmic frameworks}. [Research Report] LIGM - Laboratoire d'Informatique Gaspard-Monge.
+    
     \item {\sc Quentin Cappart, Didier Ch\`etelat, Elias B. Khalil, Andrea Lodi, Christopher Morris, Petar Veli\v{c}kovi\'c}. {\it Combinatorial Optimization \& Reasoning with Graph Neural Networks}.
     
     \item {\sc Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi, Samy Bengio} (Google Brain). {\it Neural Combinatorial Optimization with Reinforcement Learning}. ICLR2017.
     
     \item {\sc Andoni I. Garmendia, Josu Ceberio, Alexander Mendiburu}. {\it Neural Combinatorial Optimization: a New Player in the Field}.
     
-    \item {\sc Boris Goldengorin}. {\it Optimization Problems in Graph Theory}.
+    \item \cite{Goldengorin2018}. {\sc Boris Goldengorin}. {\it Optimization Problems in Graph Theory}.
     
     \item \cite{Norvig_Russel2021}. {\sc Peter Norvig, Stuart Russell}. {\it Artificial Intelligence: A Modern Approach}. 4e.
 \end{enumerate}
@@ -215,27 +250,36 @@ Các đề tài nghiên cứu tiềm năng cho Khóa Luận Tốt Nghiệp cho s
 \chapter{Computer Music}
 \minitoc
 \begin{enumerate}
-    \item {\bf Keywords.} Automatic music transcription, music generation.
-    \item {\bf Student.} {\sc Võ Ngọc Trâm Anh [VNTA].}
+    \item {\it Keywords.} Automatic music transcription, music generation.
+    \item {\it Student.} {\sc Võ Ngọc Trâm Anh [VNTA].}
 \end{enumerate}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
     \item \cite{Briot_Hadjeres_Pachet2020}. {\sc Jean-Pierre Briot, Ga\"etan Jadjeres, Fran\c{c}ois-David Pachet Pachet}. {\it Deep Learning Techniques for Music Generation}.
+    
     \item \cite{Dubnov_Greer2023}. {\sc Shlomo Dubnov, Ross Greer}. {\it Deep \& Shallow: Machine Learning in Music \& Audio}.
+    
+    \item \cite{Horn_West_Roberts2022}. {\sc Michael S.  Horn, Melanie West, Cameron Roberts}. {\it Introduction to Digital Music with Python Programming: Learning Music with Code}. 1e.
     
     {\sf Comment.} Sách có hơi nhiều lỗi chính tả.
     \item \cite{Mueller2015,Mueller2021}. {\sc Meinard M\"{u}ller}. {\it Fundamentals of Music Processing -- Using Python \& Jupyter Notebooks}.
+    
+    {\sf Comment.} Mathematically rigorous enough $\Rightarrow$ Main reference.
+\end{enumerate}
+\textbf{\textsf{Research community -- Cộng đồng nghiên cứu.}}
+\begin{enumerate}
+    \item {\sc Meinard M\"uller}. \href{https://scholar.google.de/citations?user=uggxDWIAAAAJ&hl=en}{Google Scholar}.
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
 
 \section{Automatic Music Transcription (AMT)}
-{\bf Keywords.} 
+{\it Keywords.} 
 
 %------------------------------------------------------------------------------%
 
 \section{Music Generation}
-{\bf Keywords.} Stochastic, random Boltzmann machine (RBM).
+{\it Keywords.} Stochastic, random Boltzmann machine (RBM).
 
 %------------------------------------------------------------------------------%
 
@@ -260,8 +304,8 @@ Các đề tài nghiên cứu tiềm năng cho Khóa Luận Tốt Nghiệp cho s
 \chapter{Scheduling Problems}
 \minitoc
 \begin{enumerate}
-    \item {\bf Keywords.} Deterministic scheduling problem, stochastic scheduling problems.
-    \item {\bf Student.} {\sc Nguyễn Ngọc Thạch [NNT].}
+    \item {\it Keywords.} Deterministic scheduling problem, stochastic scheduling problems.
+    \item {\it Student.} {\sc Nguyễn Ngọc Thạch [NNT].}
 \end{enumerate}
 \textbf{\textsf{Resources -- Tài nguyên.}}
 \begin{enumerate}
